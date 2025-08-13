@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>From-To Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 50px;
+      background-color: #f4f4f4;
+    }
+    .form-container {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    select, input[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0 20px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    input[type="submit"] {
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Select From and To</h2>
+  <form onsubmit="openPageWithImage(); return false;">
+    <label for="from">From:</label>
+    <select id="from" required>
+      <option value="">Select city</option>
+      <option value="Bangalore">Bangalore</option>
+    </select>
+
+    <label for="to">To:</label>
+    <select id="to" required>
+      <option value="">Select country</option>
+      <option value="Thailand">Thailand</option>
+    </select>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+<script>
+  function openPageWithImage() {
+    // ✅ Change this to your actual GitHub Pages image URL
+    const imageURL = "https://Rachanamc8.github.io/Ranga/Thailand_Itenary.jpeg";
+
+    const newWindow = window.open();
+    newWindow.document.write(`
+      <html>
+        <head><title>Photo Page</title></head>
+        <body style="display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f0f0f0;">
+          <img src="${imageURL}" alt="Uploaded Photo" style="max-width: 90%; max-height: 90%; border: 2px solid #333; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
+        </body>
+      </html>
+    `);
+  }
+</script>
+
+</body>
+</html>
